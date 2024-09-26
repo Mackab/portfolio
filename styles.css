@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+}
+
+.logo {
+    height: 4rem;
+}
+
+.nav {
+    padding: 1rem;
+    background-color: rgb(32, 32, 32);
+    display: inline-block;
+    border-radius: 3rem;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav a:hover {
+    transition: all 0.3s ease 0s;
+    color: rgb(255, 72, 0);
+}
+
+button {
+    padding: 0.5rem 2rem;
+    background-color: rgb(255, 72, 0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1.3rem;
+}
+
+button:hover {
+    background-color: rgba(255, 72, 0, 0.685);
+    color: rgba(255, 255, 255, 0.678);
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 3fr 2fr repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) 2fr repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+.div1 { 
+    grid-area: 2 / 3 / 6 / 4;
+    width: 10rem; 
+}
+
+.main-picture {
+    width: 35rem;
+    border-radius: 3rem;
+}
+
+.div2 { 
+    grid-area: 3 / 4 / 4 / 5;
+    background-color: rgb(32, 32, 32);
+
+}
+
+.div3 { 
+    grid-area: 4 / 4 / 5 / 5; 
+}
