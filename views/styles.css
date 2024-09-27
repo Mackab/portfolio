@@ -46,11 +46,16 @@ button {
     cursor: pointer;
     transition: all 0.3s ease 0s;
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 button:hover {
     background-color: rgba(255, 72, 0, 0.685);
     color: rgba(255, 255, 255, 0.678);
+}
+
+.contact-btn {
+    font-size: 1.3rem;
 }
 
 .main-picture {
@@ -76,8 +81,32 @@ button:hover {
 
 .div2 { 
     grid-area: 1 / 2 / 2 / 3; 
+    background-color: rgb(32, 32, 32);
+    padding: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: fit-content;
+    justify-content: flex-end;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .div3 { 
     grid-area: 2 / 2 / 3 / 3; 
+}
+
+.main-btn {
+    font-size: 2rem;
 }

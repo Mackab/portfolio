@@ -1,6 +1,6 @@
 <?php
 
-require '../views/layout/head.php';
+require 'layout/head.php';
 
 ?>
     
@@ -10,6 +10,6 @@ require '../views/layout/head.php';
 
 <?php
 
-require '../views/layout/foot.php';
+require 'layout/foot.php';
 
 ?>

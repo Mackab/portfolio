@@ -15,5 +15,5 @@
             <a href="../views/about.view.php">Over Mij</a>
             <a href="../views/projects.view.php">Portfolio</a>
         </nav>
-        <a href="../views/contact.view.php"><button>Contact</button></a>
+        <a href="../views/contact.view.php"><button class="contact-btn">Contact</button></a>
     </header>

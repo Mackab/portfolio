@@ -1,6 +1,6 @@
 <?php
 
-require '../views/layout/head.php';
+require 'layout/head.php';
 
 ?>
     
@@ -10,18 +10,18 @@ require '../views/layout/head.php';
                 <img src="../assets/imgs/me.jpg" class="main-picture">
             </div>
             <div class="div2"> 
-                <a class="title">Hey, ik ben<br>
-                Abel<br>
-                Mackenbach</a>
+                <a>Hey, ik ben<br></a>
+                <a class="subtitle">Abel<br></a>
+                <a class="title">Mackenbach</a>
             </div>
             <div class="div3"> 
-                <a><button>Klik hier voor mijn portfolio</button></a>
+                <a><button class="main-btn">Mijn portfolio</button></a>
             </div>
         </div>
     </main>
 
 <?php
 
-require '../views/layout/foot.php';
+require 'layout/foot.php';
 
 ?>
