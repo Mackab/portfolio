@@ -35,23 +35,24 @@ header {
 
 .nav a:hover {
     transition: all 0.3s ease 0s;
-    color: rgb(255, 72, 0);
+    color: rgb(255, 81, 0);
 }
 
 button {
-    padding: 0.5rem 2rem;
-    background-color: rgb(255, 72, 0);
+    padding: 0.5rem 3.2rem;
+    background-color: rgb(255, 81, 0);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 900;
+    width: auto;
 }
 
 button:hover {
-    background-color: rgba(255, 72, 0, 0.685);
-    color: rgba(255, 255, 255, 0.678);
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
 }
 
 .contact-btn {
@@ -68,9 +69,10 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 2fr 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 4rem;
+    grid-row-gap: 1rem;
     padding: 0 15rem;
+    margin-top: 4rem;
 }
     
 .div1 {
@@ -83,6 +85,7 @@ button:hover {
     grid-area: 1 / 2 / 2 / 3; 
     background-color: rgb(32, 32, 32);
     padding: 1rem;
+    border-radius: 3rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -96,11 +99,16 @@ button:hover {
 .title {
     font-size: 3rem;
     font-weight: 900;
+    padding-bottom: 1rem;
 }
 
 .subtitle {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.subtext {
     font-size: 2rem;
-    font-weight: 700;
 }
 
 .div3 { 

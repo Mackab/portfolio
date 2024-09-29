@@ -10,7 +10,7 @@ require 'layout/head.php';
                 <img src="../assets/imgs/me.jpg" class="main-picture">
             </div>
             <div class="div2"> 
-                <a>Hey, ik ben<br></a>
+                <a class="subtext">Hey, ik ben<br></a>
                 <a class="subtitle">Abel<br></a>
                 <a class="title">Mackenbach</a>
             </div>
