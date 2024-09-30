@@ -125,6 +125,7 @@ button:hover {
     grid-template-rows: repeat(2, 1fr) 2fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    margin: 3rem 15rem;
 }
 
 .about-div1 {
@@ -155,4 +156,9 @@ button:hover {
 .about-div6 {
     grid-area: 4 / 3 / 5 / 4;
     background-color: rgb(32, 32, 32);
+}
+
+.card {
+    padding: 0.8rem;
+    border-radius: 20px;
 }
