@@ -14,6 +14,12 @@ require 'layout/head.php';
             </div>
             <div class="about-div3 card"> 
                  <h1>My Skills</h1>
+                 <div class="skills">
+                    <i class="devicon-html5-plain subtext"></i>
+                    <i class="devicon-css3-plain subtext"></i>
+                    <i class="devicon-photoshop-plain subtext"></i>
+                    <i class="devicon-git-plain subtext"></i>
+                </div class=skills>
             </div>
             <div class="about-div4 card"> 
                 <h1>Curriculum Vitae</h1>
