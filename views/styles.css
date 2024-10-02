@@ -61,6 +61,7 @@ button:hover {
 }
 
 .icons {
+    text-decoration: none;
     font-size: 2em;
 }
 
@@ -72,10 +73,7 @@ footer {
 .footer-icons {
     display: flex;
     justify-content: space-around;
-}
-
-footer i {
-    font-size: 1em;
+    padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 430px) {
@@ -111,7 +109,5 @@ footer i {
     .button {
         text-align: center;
     }
-
-    .footer-icons
 
 }
