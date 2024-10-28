@@ -5,7 +5,7 @@ require 'layout/head.php';
 ?>
     
     <main>
-        
+        <img src="assets/imgs/me.jpg" class="main-image">
     </main>
 
 <?php
