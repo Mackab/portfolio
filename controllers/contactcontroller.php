@@ -1,10 +1,32 @@
 <?php
 // controllers/contactcontroller.php
-require_once __DIR__ . '/../core/controller.php'; // Correct pad naar controller.php
+
+require_once __DIR__ . '/../core/controller.php';
+require_once __DIR__ . '/../models/contactmodel.php'; // Zorg ervoor dat je de juiste pad gebruikt
 
 class ContactController extends Controller {
     public function index() {
-        // Logica voor de contactpagina
-        $this->render('contact'); // Zorg ervoor dat je een render-methode hebt
+        // Laad de contact view
+        $this->render('contact');
+    }
+
+    public function submit() {
+        // Controleer of het formulier is verzonden
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Verwerk de formuliergegevens
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+
+            // Validatie of andere logica kan hier worden toegevoegd
+            
+            // Voorbeeld van het opslaan van gegevens in de database
+            $contactModel = $this->loadModel('Contact');
+            $contactModel->saveContact($name, $email, $message);
+
+            // Redirect of toon een succesbericht na het indienen
+            header("Location: /contact.php?controller=Contact&action=index"); // Terug naar contactpagina
+            exit;
+        }
     }
 }
