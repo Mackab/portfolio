@@ -9,8 +9,10 @@ require 'layout/head.php';
         <div class="about-intro about-label"> 
             <h1>Hey, ik ben Abel!</h1>
             <a class="subtext">Op dit moment studeer Software Development aan het Windesheim in Almere, ik zit op dit moment in het eerste leerjaar. <br>
-            Naast mijn opleiding ben ik groot fan van Formule 1, Rugby en ik ben ook een vrij actieve gamer.
-        </a>
+            Naast mijn opleiding ben ik groot fan van Formule 1, Rugby en ik ben ook een vrij actieve gamer.</a>
+            <br>
+            <br>
+            <a href="../assets/CV.pdf" class="subtext" download>Download mijn CV</a>
         </div>
         <div class="about-picture about-label"> 
         </div>
