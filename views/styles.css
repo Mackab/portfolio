@@ -118,6 +118,10 @@ footer {
     margin-bottom: 1rem;
 }
 
+.project-image {
+    max-height: 5rem;
+}
+
 @media screen and (max-width: 430px) {
     header {
         display: flex;

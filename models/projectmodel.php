@@ -6,9 +6,16 @@ require_once __DIR__ . '/../core/database.php'; // Correct pad naar database.php
 
 class ProjectModel extends Model {
     public function getAllProjects() {
-        // Voorbeeld van database-interactie
-        $db = new Database(); // Zorg ervoor dat de Database-klasse bestaat
-        // Je database-query hier
+        $stmt = $this->db->prepare("SELECT * FROM projects");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getProjectBySlug($slug) {
+        $stmt = $this->db->prepare("SELECT * FROM projects WHERE slug = :slug");
+        $stmt->bindParam(':slug', $slug);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
 
