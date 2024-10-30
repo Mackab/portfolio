@@ -22,7 +22,7 @@ header {
     
 }
 
-main {
+.home-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,6 +108,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 15rem;
 }
 
 .main-image {
@@ -118,7 +119,7 @@ footer {
 
 .main-text {
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 1rem;
 }
 
@@ -185,6 +186,23 @@ footer {
 
         padding: 1rem 0px;
     }
+
+    .home-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .index-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
     
     .logo {
         display: none;
@@ -211,12 +229,54 @@ footer {
 
     .main-image {
         border-radius: 2rem;
-        max-height: 15rem;
-        margin-right: 0.4rem;
-        margin-left: 1rem;
+        max-width: 15rem;
+        margin: 1rem;
     }
 
     .main-text {
         font-size: 1.2em;
+        margin: 3rem;
+    }
+
+    .main-btn {
+        padding: 1rem;
+    }
+
+    /* Projects */
+
+    .project-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        max-height: 8rem;
+        max-width: 8rem;
+        margin: 1rem;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 1rem;
+    }
+    
+
+    .project {
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .project-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(36, 36, 36, 0.219);
+        border-radius: 1rem;
+        width: 15rem;
+        margin: 0;
     }
 }
