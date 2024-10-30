@@ -3,28 +3,29 @@
 require 'layout/head.php';
 
 ?>
-    
-    <main>
-    <h1>Projecten</h1>
-    <?php if (isset($projects) && !empty($projects)): ?>
-        <ul>
+
+    <h1 class="project-top">Projecten</h1>
+    <div class="project-list">
+        <?php if (isset($projects) && !empty($projects)): ?>
             <?php foreach ($projects as $project): ?>
-                <li>
-                    <a href="project.php?id=<?= htmlspecialchars($project['id']) ?>">
-                        <img src="<?= htmlspecialchars($project['image']) ?>" alt="<?= htmlspecialchars($project['title']) ?>" class="project-image">
-                        <h2><?= htmlspecialchars($project['title']) ?></h2>
-                        <p><?= htmlspecialchars($project['description']) ?></p>
-                    </a>
-                </li>
+                    <div class="project">
+                            <img src="<?= htmlspecialchars($project['image']) ?>" alt="<?= htmlspecialchars($project['title']) ?>" class="project-image">
+                        <div class="project-details">
+                            <a href="project.php?id=<?= htmlspecialchars($project['id']) ?>" class="project-title"><?= htmlspecialchars($project['title']) ?></a>
+                            <p class="project-description"><?= htmlspecialchars($project['description']) ?></p>
+                        </div>
+                    </div>
             <?php endforeach; ?>
-        </ul>
+    </div>
     <?php else: ?>
         <p>Geen projecten gevonden.</p>
     <?php endif; ?>
-    </main>
 
 <?php
 
 require 'layout/foot.php';
 
 ?>
+
+
+

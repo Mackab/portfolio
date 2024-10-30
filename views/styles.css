@@ -122,8 +122,57 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* Portfolio */
+
+.project-top {
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
 .project-image {
-    max-height: 5rem;
+    max-height: 8rem;
+    max-width: 8rem;
+    margin: 1rem;
+    background-color: rgba(110, 110, 110, 0.219);
+    border-radius: 1rem;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: rgba(36, 36, 36, 0.219);
+    border-radius: 1rem;
+    width: 40rem;
+    margin-left: 4rem;
+}
+
+.project-title {
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 81, 0);
+}
+
+.project-description {
+    font-weight: 400;
+    color: rgb(207, 222, 228);
 }
 
 @media screen and (max-width: 430px) {
