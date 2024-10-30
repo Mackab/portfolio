@@ -74,12 +74,13 @@ button:hover {
 }
 
 .subtext {
-    color: rgb(172, 188, 194);
+    color: rgb(180, 180, 180);
 }
 
 .icons {
     text-decoration: none;
     font-size: 2em;
+    padding: 0.3em;
 }
 
 i:hover {
@@ -326,6 +327,80 @@ footer {
 li {
     text-decoration: none;
     list-style-type: none;
+}
+
+/* About Page */
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) 2fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+    }
+
+.about-label {
+    background-color: rgb(32, 32, 32);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+    
+.about-intro { 
+    grid-area: 1 / 1 / 2 / 3; 
+}
+
+.about-picture { 
+    grid-area: 1 / 3 / 4 / 4;
+    max-height: 25rem; 
+    max-width: 20rem;
+    background-image: url(../assets/imgs/rugby.jpg);
+    background-size: cover;
+}
+
+.about-titles { 
+    grid-area: 2 / 1 / 3 / 2;
+    color: rgb(255, 81, 0);
+
+    max-height: 100%;
+}
+
+.about-experiences { 
+    grid-area: 2 / 2 / 5 / 3;
+}
+
+.about-quote { 
+    grid-area: 4 / 3 / 5 / 4; 
+    max-width: 20rem;
+}
+
+.about-skills { 
+    grid-area: 3 / 1 / 5 / 2; 
+}
+
+.skills-title {
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    padding-bottom: 1rem;
+}
+
+.experience-list-item {
+    padding-bottom: 1rem;
+}
+
+.experience-li-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.experience-li-subtext {
+    font-style: italic;
+    font-size: 0.8em;
 }
 
 @media screen and (max-width: 430px) {
