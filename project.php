@@ -1,6 +1,8 @@
 <?php
 // project.php
 
+require 'views/layout/head.php';
+
 // Inclusie van de database connectie
 require_once 'controllers/connect.php'; // Zorg ervoor dat dit pad correct is
 
@@ -30,3 +32,9 @@ if (isset($_GET['id'])) {
     <p>Project ID: <?= htmlspecialchars($projectId) ?></p>
 </body>
 </html>
+
+<?php
+
+require 'views/layout/foot.php';
+
+?>
