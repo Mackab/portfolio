@@ -17,7 +17,7 @@ class Model {
         try {
             $this->db = new PDO($dsn, $username, $password);
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Database connected successfully!"; // Voor debugging
+            // echo "Database connected successfully!";
         } catch (PDOException $e) {
             echo 'Database connection failed: ' . $e->getMessage();
             $this->db = null; // Zorg ervoor dat db null is bij een fout

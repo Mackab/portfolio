@@ -5,30 +5,52 @@ require 'views/layout/head.php';
 
 // Inclusie van de database connectie
 require_once 'controllers/connect.php'; // Zorg ervoor dat dit pad correct is
+require_once 'models/projectmodel.php'; // Voeg de projectmodel toe
 
 // Verkrijg het ID van de URL
 if (isset($_GET['id'])) {
     $projectId = intval($_GET['id']); // Beveiliging tegen XSS
 
-    // Hier zou je normaal gesproken de gegevens van het project ophalen uit de database
-    // Voorbeeld: $project = $database->getProjectById($projectId);
+    // Maak een instantie van het ProjectModel
+    $projectModel = new ProjectModel();
+    
+    // Haal het project op op basis van het ID
+    $project = $projectModel->getProjectById($projectId);
+    
+    // Controleer of het project bestaat
+    if (!$project) {
+        echo "Project niet gevonden.";
+        exit;
+    }
 } else {
     echo "Geen project ID opgegeven.";
     exit;
 }
-
-// Hier ga je de projectinformatie weergeven
 ?>
+    <div class="detail-project-container">
+    <h1 class="detail-project-title"><?= htmlspecialchars($project['title']) ?></h1>
+    <img class="detail-project-image" src="<?= htmlspecialchars($project['image']) ?>" alt="<?= htmlspecialchars($project['title']) ?>">
+    <p class="detail-project-description"> <?= htmlspecialchars($project['long_description']) ?></p>
+    <?php if (!empty($project['github_link'])): ?>
+        <p class="detail-project-github"><strong>GitHub:</strong> <a href="<?= htmlspecialchars($project['github_link']) ?>" target="_blank"><?= htmlspecialchars($project['github_link']) ?></a></p>
+    <?php endif; ?>
+    </div>
+        <?php if (!empty($project['image2']) || !empty($project['image3']) || !empty($project['image4'])): ?>
+            <div class="additional-images">
+                <?php if (!empty($project['image2'])): ?>
+                    <img src="<?= htmlspecialchars($project['image2']) ?>" alt="Extra afbeelding 2" class="additional-image">
+                <?php endif; ?>
+                
+                <?php if (!empty($project['image3'])): ?>
+                    <img src="<?= htmlspecialchars($project['image3']) ?>" alt="Extra afbeelding 3" class="additional-image">
+                <?php endif; ?>
+                
+                <?php if (!empty($project['image4'])): ?>
+                    <img src="<?= htmlspecialchars($project['image4']) ?>" alt="Extra afbeelding 4" class="additional-image">
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
 
+<!-- Toevoegen van de GitHub-link -->
 
-    <h1>Project Details</h1>
-    <!-- Hier zou je projectdetails invoegen -->
-    <p>Project ID: <?= htmlspecialchars($projectId) ?></p>
-
-
-
-<?php
-
-require 'views/layout/foot.php';
-
-?>
+<?php require 'views/layout/foot.php'; ?>

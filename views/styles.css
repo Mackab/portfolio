@@ -90,10 +90,14 @@ i:hover {
 footer {
     text-align: center;
     padding: 0px 1rem;
-    position: fixed;
     left: 0;
     bottom: 1rem;
     width: 100%;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
 }
 
 .footer-icons {
@@ -173,6 +177,47 @@ footer {
 .project-description {
     font-weight: 400;
     color: rgb(207, 222, 228);
+}
+
+/* Project Detail Page */
+
+.detail-project-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.detail-project-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgb(255, 81, 0);
+    margin-bottom: 3rem;
+    background-color: rgba(36, 36, 36, 0.438);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.detail-project-image {
+    max-width: 40rem;
+    max-height: 20rem;
+    margin-bottom: 5rem;
+}
+
+.detail-project-description {
+    background-color: rgba(36, 36, 36, 0.438);
+    border-radius: 1rem;
+    max-width: 50rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-project-github {
+    background-color: rgba(36, 36, 36, 0.438);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 430px) {

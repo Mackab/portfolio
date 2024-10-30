@@ -17,5 +17,12 @@ class ProjectModel extends Model {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getProjectById($id) {
+        $stmt = $this->db->prepare("SELECT * FROM projects WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC); // Retourneert het project of false als het niet bestaat
+    }
 }
 
