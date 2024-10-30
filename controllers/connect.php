@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db = 'profile';
+$db = 'projects';
 $user = 'root';
 $pass = 'root';
 $conn = null;

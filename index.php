@@ -1,12 +1,8 @@
 <?php
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
-$requestPage = $_SERVER['REQUEST_URI'];
+// echo "Current directory: " . __DIR__ . "<br>";
 
-switch ($requestPage) {
-    case '/':
-        require 'views/index.view.php';
-        break;
-    case '/views/about.view.php':
-        require 'views/about.view.php';
-        break;
-}
+require_once "core/router.php";
+Router::start();
