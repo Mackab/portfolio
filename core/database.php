@@ -1,6 +1,5 @@
 <?php
 
-// core/database.php
 class Database {
     private $host = 'localhost';
     private $db_name = 'projects';

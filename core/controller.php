@@ -19,10 +19,10 @@ class Controller {
     }
 
     public function loadModel($model) {
-        $modelPath = __DIR__ . '/../models/' . strtolower($model) . 'model.php'; // Zorg ervoor dat het pad correct is
+        $modelPath = __DIR__ . '/../models/' . strtolower($model) . 'model.php';
         if (file_exists($modelPath)) {
             require_once $modelPath;
-            $modelName = ucfirst($model) . 'Model'; // Zorg ervoor dat de modelnaam correct is
+            $modelName = ucfirst($model) . 'Model';
             return new $modelName();
         } else {
             throw new Exception("Model file not found: " . $modelPath);

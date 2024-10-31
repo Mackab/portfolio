@@ -1,8 +1,7 @@
 <?php
-// controllers/connect.php
 
 $host = 'localhost';
-$dbname = 'projects'; // Zorg ervoor dat dit de juiste database is
+$dbname = 'projects';
 $user = 'root';
 $pass = 'root';
 
@@ -14,5 +13,4 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Dit is een object, zorg ervoor dat je het beschikbaar maakt
 return $conn;

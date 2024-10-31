@@ -10,9 +10,9 @@ class Model {
     }
 
     private function connect() {
-        $dsn = 'mysql:host=localhost;dbname=projects;charset=utf8'; // Vervang YOUR_DATABASE_NAME door je echte database naam
-        $username = 'root'; // Dit is meestal 'root' voor lokale XAMPP-installaties
-        $password = 'root'; // Laat dit leeg als er geen wachtwoord is ingesteld
+        $dsn = 'mysql:host=localhost;dbname=projects;charset=utf8';
+        $username = 'root'; 
+        $password = 'root'; 
 
         try {
             $this->db = new PDO($dsn, $username, $password);

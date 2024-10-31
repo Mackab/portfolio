@@ -1,11 +1,8 @@
 <?php
 
-// views/contact.view.php
-
 require 'layout/head.php';
 
-// Inclusie van de database connectie
-require_once 'controllers/connect.php'; // Zorg ervoor dat dit pad correct is
+require_once 'controllers/connect.php';
 
 // Verwerk het formulier als het is ingediend
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -42,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="contact-index">
         <div class="contact-form"> 
             <h2>Neem contact op</h2>
-            <form method="POST" action=""> <!-- Laat de actie leeg om naar dezelfde pagina te sturen -->
+            <form method="POST" action="">
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" required>
 

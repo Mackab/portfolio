@@ -1,11 +1,10 @@
 <?php
-// project.php
 
 require 'views/layout/head.php';
 
 // Inclusie van de database connectie
-require_once 'controllers/connect.php'; // Zorg ervoor dat dit pad correct is
-require_once 'models/projectmodel.php'; // Voeg de projectmodel toe
+require_once 'controllers/connect.php';
+require_once 'models/projectmodel.php';
 
 // Verkrijg het ID van de URL
 if (isset($_GET['id'])) {
@@ -50,7 +49,5 @@ if (isset($_GET['id'])) {
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-
-<!-- Toevoegen van de GitHub-link -->
 
 <?php require 'views/layout/foot.php'; ?>

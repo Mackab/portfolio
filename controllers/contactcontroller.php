@@ -1,8 +1,7 @@
 <?php
-// controllers/contactcontroller.php
 
 require_once __DIR__ . '/../core/controller.php';
-require_once __DIR__ . '/../models/contactmodel.php'; // Zorg ervoor dat je de juiste pad gebruikt
+require_once __DIR__ . '/../models/contactmodel.php';
 
 class ContactController extends Controller {
     public function index() {
@@ -18,7 +17,6 @@ class ContactController extends Controller {
             $email = $_POST['email'];
             $message = $_POST['message'];
 
-            // Validatie of andere logica kan hier worden toegevoegd
             
             // Voorbeeld van het opslaan van gegevens in de database
             $contactModel = $this->loadModel('Contact');

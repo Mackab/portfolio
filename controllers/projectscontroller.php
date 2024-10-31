@@ -1,9 +1,8 @@
 <?php
-// controllers/projectcontroller.php
 
 
 require_once __DIR__ . '/../core/controller.php';
-require_once __DIR__ . '/../models/projectmodel.php'; // Zorg ervoor dat je de juiste pad gebruikt
+require_once __DIR__ . '/../models/projectmodel.php';
 
 class ProjectsController extends Controller {
     public function index() {
